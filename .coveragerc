@@ -1,0 +1,3 @@
+[run]
+source = pvault
+omit = pvault/test*

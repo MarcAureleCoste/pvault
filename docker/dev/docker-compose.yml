@@ -1,0 +1,28 @@
+version: "3.2"
+
+services:
+    postgresql:
+        image: postgres:10.1
+        container_name: postgres-pvault
+        # networks:
+        #     - internalnet
+        ports:
+            - "5432:5432"
+        volumes:
+            - type: volume
+              source: postgres-pvault
+              target: /var/lib/postgresql/data
+        environment:
+            POSTGRES_USER: pvault
+            POSTGRES_PASSWORD: pvault
+            PGDATA: /var/lib/postgresql/data/pgdata
+            POSTGRES_DB: pvault
+
+    redis:
+        image: redis:latest
+        container_name: redis-pvault
+        ports:
+            - "6379:6379"
+
+volumes: 
+    postgres-pvault:
