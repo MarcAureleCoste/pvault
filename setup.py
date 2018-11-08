@@ -31,6 +31,9 @@ REQUIRES = [
     'zope.sqlalchemy',
     'alembic',
 
+    # Nameko microservice
+    'nameko',
+
     # Redis sessions
     'redis',
     'msgpack',

@@ -1,0 +1,28 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+<div class="content">
+  <h1>
+    Logout page
+  </h1>
+  <p class="lead">
+    This is the logout page.
+  </p>
+  <div>
+    {{ result }}
+  </div>
+
+  <form action="{{ url }}" method="post">
+    <input type="hidden" name="next" value="{{ next_url }}">
+
+    <div class="grid-x">
+      <div class="medium-4 medium-offset-4 cell">
+        <button class="button cell" type="submit" name="form.submitted" value="Log In">
+          {% trans %}Log out{% endtrans %}
+        </button>
+      </div>
+    </div>
+
+  </form>
+</div>
+{% endblock content %}

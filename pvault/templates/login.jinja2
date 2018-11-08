@@ -1,0 +1,41 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+<div class="content">
+  <h1>
+    Login page
+  </h1>
+  <p class="lead">
+    This is a test page.
+  </p>
+  <div>
+    {{ result }}
+  </div>
+  <form action="{{ url }}" method="post">
+    <input type="hidden" name="next" value="{{ next_url }}">
+
+    <div>
+      <label for="email">
+        Email
+        <input type="text" name="email" value="{{ email }}">
+      </label>
+    </div>
+
+    <div>
+      <label for="password">
+        {% trans %}Password{% endtrans %}
+        <input type="password" name="password">
+      </label>
+    </div>
+
+    <div class="grid-x">
+      <div class="medium-4 medium-offset-4 cell">
+        <button class="button cell" type="submit" name="form.submitted" value="Log In">
+          {% trans %}Log In{% endtrans %}
+        </button>
+      </div>
+    </div>
+
+  </form>
+</div>
+{% endblock content %}

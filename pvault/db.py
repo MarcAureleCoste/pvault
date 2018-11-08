@@ -15,7 +15,6 @@ from sqlalchemy.orm import sessionmaker, configure_mappers
 from sqlalchemy.schema import MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.dialects.postgresql import UUID
-
 from sqlalchemy.orm.exc import DetachedInstanceError
 
 import zope.sqlalchemy
